@@ -1,10 +1,29 @@
 html, body {
     width: 500px;
+    margin: 50px;
+}
+#input_content
+{
+    padding: 20px;
+    margin: 5px;
+}
+#input_content label
+{
+    font-size: 15px;
+    margin-right: 5px;
+}
+.error {
+    color: red;
+    font-size: 15px;
+}
+#data
+{
     padding: 20px;
 }
-#data h2
+.big
 {
     font-size: 20px;
+    text-align: center;
 }
 #data h3
 {
