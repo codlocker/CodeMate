@@ -1,5 +1,5 @@
 html, body {
-    width: 500px;
+    width: 400px;
     margin: 50px;
 }
 #input_content
@@ -16,9 +16,10 @@ html, body {
     color: red;
     font-size: 15px;
 }
-#data
+header h2, footer p
 {
     padding: 20px;
+    text-align: center;
 }
 .big
 {
@@ -37,20 +38,4 @@ html, body {
     text-align: center;
     font-size: 1.5em;
     cursor: pointer;
-}
-
-.beast:hover {
-    background-color: #CFF2F2;
-}
-
-.beast {
-    background-color: #E5F2F2;
-}
-
-.clear {
-    background-color: #FBFBC9;
-}
-
-.clear:hover {
-    background-color: #EAEAC9;
 }

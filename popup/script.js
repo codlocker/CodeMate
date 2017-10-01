@@ -37,7 +37,7 @@ function executeScript(link) {
             }
         },
         error: function () {
-            $("#data").html("<p class='error'>Error: Page Does Not Exist!</p>");
+            $("#data").html("<p class='error'>Error: Could not fetch Data!</p>");
             $("#content").html("");
         }
     });
@@ -60,6 +60,7 @@ function formLink() {
         executeScript(new_url);
     }
     else {
-        alert("Error");
+        $("#data").html("<p class='error'>Error: Page Does Not Exist!</p>");
+        $("#content").html("");
     }
 }
