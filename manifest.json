@@ -1,11 +1,11 @@
 {
 
   "manifest_version": 2,
-  "name": "TopQuestions",
+  "name": "CodeMate",
   "version": "1.0",
 
-  "description": "Adds a browser action icon to the toolbar. Click the button to get top links from GeeksForGeeks Website",
-  "homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/beastify",
+  "description": "It is your digital handbook for coding. Use it to improve your coding skills. Click the button to get coding questions from GeeksForGeeks Website",
+  "homepage_url": "https://github.com/codlocker/CodeMate/",
   "icons": {
     "48": "icons/mate.png"
   },
