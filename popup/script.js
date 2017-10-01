@@ -14,7 +14,12 @@ function executeScript(link) {
     $.ajax({
         url: link,
         type: "GET",
+        beforeSend: function () {
+          $("#data").html("<img src='./../loader.gif' width='300px' height='300px'>");
+        },
         success: function (response) {
+            let dat = $("#data");
+            dat.html("");
             let s = $.parseHTML(response);
             let context = $("#content");
             context.html(s);
@@ -28,7 +33,7 @@ function executeScript(link) {
                 $(h1_nw).append(a_nw);
                 $(a_nw).html($(entry_point).get(i));
                 $(h1_nw).addClass("content_data");
-                $("#data").append(h1_nw);
+                dat.append(h1_nw);
             }
         },
         error: function () {
