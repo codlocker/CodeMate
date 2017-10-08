@@ -1,9 +1,11 @@
 ### ADDON FOR VIEWING TOP QUESTIONS ON GeeksForGeeks ###
 --------------------------------------------------------
 This add-on for **Firefox** is basically a tool for reading the popular coding posts on geeksforgeeks.
-The aim of this addon was to have a handbook for coding questions for users to use.
+The aim is to build this as a handbook for coders to useand not just limited to GeeksForGeeks.
 
-- This is a version 1.0
+- New release Version 1.1
+
+- Updated UI and Bug Fixes related to element positioning
 
 - The addon was built as a part of **Mozilla Hackathon** Swecha @BITS Pilani Hyderabad Campus
 
