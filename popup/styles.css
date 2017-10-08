@@ -11,6 +11,7 @@ input, button {
 .error {
     color: white;
     background-color: lightcoral;
+    font-weight: bolder;
     padding: 10px 20px;
     text-align: center;
 }

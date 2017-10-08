@@ -4,13 +4,21 @@ document.addEventListener('DOMContentLoaded', function() {
     link.addEventListener('click', function() {
         formLink();
     });
+    // onkeypress's Logic Below
+    let page_inp = document.getElementById('url_form');
+    page_inp.addEventListener('keyup', function (event) {
+        if (event.keyCode === 13) {
+            formLink();
+        }
+    });
 });
 
 $(document).ready(function () {
+    $("#sorryImage").hide();
     executeScript("http://www.geeksforgeeks.org/");
 });
-
 function executeScript(link) {
+    let sorry_image = $("#sorryImage");
     $.ajax({
         url: link,
         type: "GET",
@@ -18,7 +26,8 @@ function executeScript(link) {
           $("#preloader").show();
         },
         success: function (response) {
-            $("#preloader").hide(200);
+            $("#preloader").hide(10);
+            sorry_image.hide(2000);
             let dat = $("#data");
             dat.html("");
             let s = $.parseHTML(response);
@@ -38,13 +47,17 @@ function executeScript(link) {
             dat.append(ul_tag);
         },
         error: function () {
+            $("#preloader").hide(10);
             $("#data").html("<p class='error'>Error: Unable to fetch data</p>");
+            sorry_image.show();
             $("#content").html("");
         }
     });
 }
 
 function formLink() {
+    let sorry_image = $("#sorryImage");
+    sorry_image.hide();
     let data = $("[name='url_form']").val();
     let inp_data = parseInt(data);
     const url = "http://www.geeksforgeeks.org/";
@@ -62,6 +75,7 @@ function formLink() {
     }
     else {
         $("#data").html("<p class='error'>Error: Page Does Not Exist!</p>");
+        sorry_image.show();
         $("#content").html("");
     }
 }

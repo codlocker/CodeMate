@@ -3,7 +3,7 @@
 This add-on for **Firefox** is basically a tool for reading the popular coding posts on geeksforgeeks.
 The aim is to build this as a handbook for coders to useand not just limited to GeeksForGeeks.
 
-- Current  release Version 1.2
+- Current release [Version 1.2.1](https://addons.mozilla.org/en-US/firefox/addon/codemate/)
 
 - Updated UI and Bug Fixes related to element positioning
 
