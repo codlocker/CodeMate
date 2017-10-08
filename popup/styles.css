@@ -34,6 +34,11 @@ header h1, footer p
     color: #003333 !important;
     font-weight: 700;
 }
+#data a:hover, #data a:visited{
+    color: #0066cc !important;
+    text-decoration: underline !important;
+    font-weight: 700;
+}
 #preloader {
     margin: 20% auto;
     text-align: center;
