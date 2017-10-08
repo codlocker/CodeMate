@@ -15,29 +15,30 @@ function executeScript(link) {
         url: link,
         type: "GET",
         beforeSend: function () {
-          $("#data").html("<img src='./../loader.gif' width='300px' height='300px'>");
+          $("#preloader").show();
         },
         success: function (response) {
+            $("#preloader").hide(200);
             let dat = $("#data");
             dat.html("");
             let s = $.parseHTML(response);
             let context = $("#content");
             context.html(s);
             let entry_point;
-            entry_point = context.find(".entry-title");
+            entry_point = context.find(".entry-title").removeClass();
+            context.html("");
             let array = [];
+            let ul_tag = document.createElement("ol");
             for(i = 0; i < entry_point.length; i++ )
             {
-                let h1_nw = document.createElement("h3");
-                let a_nw = document.createElement("a");
-                $(h1_nw).append(a_nw);
-                $(a_nw).html($(entry_point).get(i));
-                $(h1_nw).addClass("content_data");
-                dat.append(h1_nw);
+                let h1_nw = document.createElement("li");
+                $(h1_nw).html($(entry_point).get(i));
+                ul_tag.append(h1_nw);
             }
+            dat.append(ul_tag);
         },
         error: function () {
-            $("#data").html("<p class='error'>Error: Could not fetch Data!</p>");
+            $("#data").html("<p class='error'>Error: Unable to fetch data</p>");
             $("#content").html("");
         }
     });

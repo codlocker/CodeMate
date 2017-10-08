@@ -1,41 +1,42 @@
 html, body {
-    width: 400px;
-    margin: 50px;
+    max-width: 450px;
+    margin: 10px;
+    font-size: 12px;
+    background-color: #e6f2ff;
+    color: #003333;
 }
-#input_content
-{
-    padding: 20px;
-    margin: 5px;
-}
-#input_content label
-{
-    font-size: 15px;
-    margin-right: 5px;
+input, button {
+    min-height: 50px;
 }
 .error {
-    color: red;
-    font-size: 15px;
+    color: white;
+    background-color: lightcoral;
+    padding: 10px 20px;
+    text-align: center;
 }
-header h2, footer p
+header h1, footer p
 {
+    font-weight: bold;
     padding: 20px;
     text-align: center;
 }
 .big
 {
-    font-size: 20px;
     text-align: center;
 }
-#data h3
+#data li
 {
     font-size: 15px;
-    color: black;
-    padding: 20px;
+    color: #003333;
+    padding: 5px;
 }
-.button {
-    margin: 3% auto;
-    padding: 4px;
+#data a {
+    color: #003333 !important;
+    font-weight: 700;
+}
+#preloader {
+    margin: 20% auto;
     text-align: center;
-    font-size: 1.5em;
-    cursor: pointer;
+    width: 40px;
+    height: 40px;
 }
